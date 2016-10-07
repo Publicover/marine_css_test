@@ -1,0 +1,2 @@
+class Gottatest < ApplicationRecord
+end

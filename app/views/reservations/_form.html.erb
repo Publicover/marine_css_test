@@ -1,0 +1,134 @@
+<%= form_for @reservation do |f| %>
+
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <p>
+        <%= pluralize(@reservation.errors.count, "error") %> prohibited
+        this article from being saved:
+      </p>
+        <% @reservation.errors.full_messages.each do |msg| %>
+          <li><center><%= msg %></li>
+        <% end %>
+    </div>
+    <% end %>
+
+    <p>
+      <strong><%= f.label :prefix_one %><br></strong>
+      <%= f.text_field :prefix_one %>
+    </p>
+
+    <p>
+      <strong><%= f.label :first_name_one %><br></strong>
+      <%= f.text_field :first_name_one %>
+    </p>
+
+    <p>
+      <strong><%= f.label :last_name_one %><br></strong>
+      <%= f.text_field :last_name_one %>
+    </p>
+
+    <p>
+      <strong><%= f.label :prefix_two %><br></strong>
+      <%= f.text_field :prefix_two %>
+    </p>
+
+    <p>
+      <strong><%= f.label :first_name_two %><br></strong>
+      <%= f.text_field :first_name_two %>
+    </p>
+
+    <p>
+      <strong><%= f.label :last_name_two %><br></strong>
+      <%= f.text_field :last_name_two %>
+    </p>
+
+    <p>
+      <strong><%= f.label :full_company_name %><br></strong>
+      <%= f.text_field :full_company_name %>
+    </p>
+
+    <p>
+      <strong><%= f.label :title %><br></strong>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <strong><%= f.label :mla_title %><br></strong>
+      <%= f.text_field :mla_title %>
+    </p>
+
+    <p>
+      <strong><%= f.label :number_and_street %><br></strong>
+      <%= f.text_field :number_and_street %>
+    </p>
+
+    <p>
+      <strong><%= f.label :suite_or_apt %><br></strong>
+      <%= f.text_field :suite_or_apt %>
+    </p>
+
+    <p>
+      <strong><%= f.label :city %><br></strong>
+      <%= f.text_field :city %>
+    </p>
+
+    <p>
+      <strong><%= f.label :state %><br></strong>
+      <%= f.text_field :state %>
+    </p>
+
+    <p>
+      <strong><%= f.label :zip %><br></strong>
+      <%= f.text_field :zip %>
+    </p>
+
+    <p>
+      <strong><%= f.label :work_phone %><br></strong>
+      <%= f.text_field :work_phone %>
+    </p>
+
+    <p>
+      <strong><%= f.label :cell_phone %><br></strong>
+      <%= f.text_field :cell_phone %>
+    </p>
+
+    <p>
+      <strong><%= f.label :email_address %><br></strong>
+      <%= f.text_field :email_address %>
+    </p>
+
+    <p>
+      <strong><%= f.label :confirm_email %><br></strong>
+      <%= f.text_field :confirm_email %>
+    </p>
+
+    <p>
+      <strong><%= f.label :mla_role_one_of_four %><br></strong>
+      <%= f.text_field :mla_role_one_of_four %>
+    </p>
+
+    <p>
+      <strong><%= f.label :arrival %><br></strong>
+      <%= f.date_field :arrival %>
+    </p>
+
+    <p>
+      <strong><%= f.label :hotel_departure %><br></strong>
+      <%= f.text_field :hotel_departure %>
+    </p>
+
+    <p>
+      <strong><%= f.label :special_needs %><br></strong>
+      <%= f.text_field :special_needs %>
+    </p>
+
+    <p>
+      <strong><%= f.label :special_requests %><br></strong>
+      <%= f.text_field :special_requests %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
